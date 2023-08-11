@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uiu-pO-Vi8">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Note List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NoteListViewController" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GYt-0D-Bdd">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Q0H-wF-91n"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="O7t-LC-OIm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GYt-0D-Bdd" secondAttribute="trailing" id="247-Td-m4O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GYt-0D-Bdd" secondAttribute="bottom" id="aeh-cX-imE"/>
+                            <constraint firstItem="GYt-0D-Bdd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hni-zW-sJK"/>
+                            <constraint firstItem="GYt-0D-Bdd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ncH-jK-bLW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nAC-in-Yi4"/>
+                    <connections>
+                        <outlet property="notelistTableView" destination="GYt-0D-Bdd" id="22F-kf-s80"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.25954198473278" y="4.9295774647887329"/>
+        </scene>
+        <!--List Detail View Controller-->
+        <scene sceneID="0eQ-gl-0u4">
+            <objects>
+                <viewController storyboardIdentifier="ListDetailViewController" id="8LH-fk-oCO" customClass="ListDetailViewController" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8xG-z5-cGE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aeG-CQ-ccG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8LH-fk-oCO" id="eUA-vk-r4f"/>
+                                    <outlet property="delegate" destination="8LH-fk-oCO" id="nm4-5B-bhm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ciF-4i-351"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ciF-4i-351" firstAttribute="bottom" secondItem="aeG-CQ-ccG" secondAttribute="bottom" id="ErT-dH-ofQ"/>
+                            <constraint firstItem="aeG-CQ-ccG" firstAttribute="leading" secondItem="ciF-4i-351" secondAttribute="leading" id="K7Q-Eu-J0z"/>
+                            <constraint firstItem="ciF-4i-351" firstAttribute="trailing" secondItem="aeG-CQ-ccG" secondAttribute="trailing" id="a2i-l4-yno"/>
+                            <constraint firstItem="aeG-CQ-ccG" firstAttribute="top" secondItem="ciF-4i-351" secondAttribute="top" id="xZ4-tW-gZ8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailTableView" destination="aeG-CQ-ccG" id="8cx-W3-vmX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yg-9W-gtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yM5-xa-dcX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uiu-pO-Vi8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I9L-Jg-mDW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gwp-iG-cTo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qO-Ur-Y6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40.458015267175568" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
