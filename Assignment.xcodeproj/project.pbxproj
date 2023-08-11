@@ -133,7 +133,6 @@
 				0894412C2A855A970070F873 /* Helper */,
 				089441272A8552D60070F873 /* Constants */,
 				0864766C2A84F3BD00F07813 /* Extensions */,
-				0864766B2A84F3B800F07813 /* Utility */,
 				0864766A2A84F3AD00F07813 /* Managers */,
 				0864766D2A84F3F000F07813 /* Modules */,
 				0864766E2A84F3FD00F07813 /* Stroryboard */,
@@ -158,13 +157,6 @@
 				089441262A85524F0070F873 /* NetworkManager */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		0864766B2A84F3B800F07813 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		0864766C2A84F3BD00F07813 /* Extensions */ = {
